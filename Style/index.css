@@ -82,6 +82,9 @@ nav {
 .logo p {
   display: none;
 }
+.logo p:hover{
+  color: #09f;
+}
 nav ul {
   display: flex;
   justify-content: flex-start;
