@@ -81,7 +81,7 @@ nav {
 }
 .logo p {
   display: none;
-  color: #09f;
+  color: #000;
 }
 nav ul {
   display: flex;
