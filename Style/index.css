@@ -540,7 +540,8 @@ nav ul li a:hover {
   width: 5px;
   background-color: #dc3545;
 }
-.news-more .content-list a{
+.news-more .content-list{
+  position: relative;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -551,6 +552,16 @@ nav ul li a:hover {
   margin: auto;
   text-decoration: none;
   color: #333;
+}
+.content-list a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+  margin: auto;
+  gap: 15px;
+  transition: all .4s;
 }
 /*  */
 .list-video {
