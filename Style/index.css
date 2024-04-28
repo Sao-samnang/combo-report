@@ -1126,8 +1126,9 @@ nav ul li a:hover {
     width: 95%;
     height: 250px;
   }
-  .cardHead .card-txt {
+  .cardHead .card-txt,.card-txt .list-phone {
     height: 60%;
+    font-size: 18px;
   }
   .card-txt .txt-card-head {
     margin-top: 20px;
