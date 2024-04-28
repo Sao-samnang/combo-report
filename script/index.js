@@ -62,3 +62,127 @@ btnMenu.addEventListener("click", function () {
     document.getElementById("menuIcon2").style.display = "none";
   }
 });
+// jquery
+$(document).ready(function () {
+  // slider
+  let SliderHead = [
+    {
+      Image: "image/Apple-with-AI.jpg",
+      txtbtn: "ទូរស័ព្ទ",
+      txt: "Apple ជួបពិភាក្សាជាមួយ OpenAI ម្ដងទៀត លើការប្រើប្រាស់ Generative AI សម្រាប់ iOS 18"
+    },
+    {
+      Image: "image/company_energizer.jpg",
+      txtbtn: "ទូរស័ព្ទ",
+      txt: "Energizer ត្រៀមដាក់បង្ហាញស្មាតហ្វូន​ P28K មានទំហំថ្មធំដល់​ 28,000mAh ឯណោះ"
+    },
+    {
+      Image: "image/HONOR Pad X9.jpg",
+      txtbtn: "ថេប្លេត-កុំព្យូទ័រ",
+      txt: "ថេប្លេតស៊េរីថ្មី HONOR Pad X9 អេក្រង់ 2K ល្បឿនអេក្រង់ 120Hz ចេញផ្លូវការក្នុងតម្លៃ 249$"
+    },
+    {
+      Image: "image/Sony-Xperia 1vi.jpg",
+      txtbtn: "ទូរស័ព្ទ",
+      txt: "តម្លៃដាក់លក់របស់ Xperia 1 VI ត្រូវបានលាតត្រដាងក្រៅផ្លូវការកាលពីពេលថ្មីៗនេះ"
+    },
+    {
+      Image: "image/moondrop 01.jpg",
+      txtbtn: "ទូរស័ព្ទ",
+      txt: "Moondrop MIAD 01 ប្រកាសចេញជាផ្លូវការហើយ ជាមួយរន្ធដោតកាស 4.4mm 4Vrms និង 3.5mm 2Vrms"
+    }
+  ];
+  // get header slide fun
+  let numSlideh =0;
+  function getSlide() {
+    let txtslide = "";
+    SliderHead.forEach((item) => {
+      txtslide += `
+    <div class="card-news-head">
+      <a class="sildeHead" href="#" target="">
+        <div class="card-overlay"></div>
+        <div class="card-txt">
+          <a class="list-phone" href="#">${item["txtbtn"]}</a>
+          <div class="txt-card-head">
+            <p>
+                ${item["txt"]}
+            </p>
+          </div>
+        </div>
+        <img src="${item["Image"]}" alt="">
+      </a>
+    </div>
+        `;
+      numSlideh++;
+    });
+    $(".cardHead").append(txtslide);
+    // console.log(txtslide);
+  }
+   getSlide();
+  // // end header slider
+  // slide change
+  let slideShow = $(".card-news-head");
+  // console.log(slideShow);
+  let indexSH = 0;
+  slideShow.hide();
+  slideShow.eq(0).show();
+  function NextSlideH() {
+    slideShow.eq(indexSH).hide();
+    indexSH++;
+    if (indexSH == numSlideh) {
+      indexSH = 0;
+    }
+    slideShow.eq(indexSH).show();
+  }
+  //  auto change slide
+  let mySlideH=setInterval(function(){
+    NextSlideH();
+  },5400)
+  let mySlideBnH=setInterval(function(){
+    NextSlideBnH();
+  },6400)
+  // slide banner home
+  let BannerHome = [
+    {
+      ImageBn: "image/Banner we Cambo-report 2.png"
+    },
+    {
+      ImageBn: "image/banner-camboreport4.jpg"
+    },
+    {
+      ImageBn: "image/banner cambo-report3.jpg"
+    }
+  ];
+  function GetSlideBannerHome() {
+    let txtslide = "";
+    BannerHome.forEach((item) => {
+      txtslide += `
+          <div class="bannerHome">
+            <a href="#">
+              <img src="${item["ImageBn"]}" alt="">
+            </a>
+          </div>
+          `;
+    });
+    $(".card-banner").append(txtslide);
+    // console.log(txtslide);
+  }
+  GetSlideBannerHome();
+  // // end header slider
+  // slide change
+  let sBanHomeSh = $(".bannerHome");
+  let numSBnHome = sBanHomeSh.length;
+  // console.log(numSBnHome);
+  let indexBnH = 0;
+  sBanHomeSh.hide();
+  sBanHomeSh.eq(0).show();
+  function NextSlideBnH() {
+    sBanHomeSh.eq(indexBnH).hide();
+    indexBnH++;
+    if (indexBnH == numSBnHome) {
+      indexBnH = 0;
+    }
+    sBanHomeSh.eq(indexBnH).show();
+  }
+  // end slide banner
+});

@@ -1,6 +1,10 @@
 html {
   scroll-behavior: smooth;
 }
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url("../Font/Roboto-Bold.ttf");
+}
 * {
   padding: 0;
   margin: 0;
@@ -222,7 +226,7 @@ nav ul li a:hover {
   height: fit-content;
   margin: auto;
 }
-.card-news-head {
+.cardHead {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -234,6 +238,14 @@ nav ul li a:hover {
   position: relative;
   margin-top: 20px;
   cursor: pointer;
+}
+.card-news-head{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
 }
 .card-news-head a{
   width: 100%;
@@ -271,7 +283,7 @@ nav ul li a:hover {
   z-index: 12;
   background: none;
   bottom: 0;
-  font-family: "Koulen", sans-serif;
+  font-family: "Roboto-Bold",Koulen, sans-serif;
   color: #fff;
   font-size: 22px;
 }
@@ -294,10 +306,6 @@ nav ul li a:hover {
   font-size: 20px;
   color: #fff;
 }
-.card-txt span {
-  font-weight: bolder;
-  font-family: "Roboto", sans-serif;
-}
 .card-banner {
   display: flex;
   justify-content: center;
@@ -306,8 +314,14 @@ nav ul li a:hover {
   height: auto;
   margin: 15px auto 25px auto;
 }
-.card-banner a {
+.bannerHome{
   display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.card-banner a {
   width: 100%;
   height: 100%;
 }
@@ -795,7 +809,7 @@ nav ul li a:hover {
   nav {
     width: 78%;
   }
-  .card-news-head {
+  .cardHead {
     width: 90%;
   }
   .card-banner {
@@ -829,7 +843,7 @@ nav ul li a:hover {
   nav {
     width: 85%;
   }
-  .card-news-head {
+  .cardHead {
     width: 93%;
   }
   .card-banner {
@@ -876,7 +890,7 @@ nav ul li a:hover {
   .menu-check {
     display: flex;
   }
-  .card-news-head {
+  .cardHead {
     width: 95%;
   }
   .card-banner {
@@ -1108,11 +1122,11 @@ nav ul li a:hover {
     width: 95%;
     margin-bottom: 15px;
   }
-  .card-news-head {
+  .cardHead {
     width: 95%;
     height: 250px;
   }
-  .card-news-head .card-txt {
+  .cardHead .card-txt {
     height: 60%;
   }
   .card-txt .txt-card-head {
