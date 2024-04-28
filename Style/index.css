@@ -1132,6 +1132,7 @@ nav ul li a:hover {
   }
   .card-txt .txt-card-head {
     margin-top: 20px;
+    padding: 0 10px;
   }
   .box-more {
     grid-template-columns: repeat(1, 1fr);

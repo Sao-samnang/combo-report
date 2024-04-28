@@ -99,7 +99,7 @@ $(document).ready(function () {
     SliderHead.forEach((item) => {
       txtslide += `
     <div class="card-news-head">
-      <a class="sildeHead" href="#" target="">
+      <a href="#" target="">
         <div class="card-overlay"></div>
         <div class="card-txt">
           <a class="list-phone" href="#">${item["txtbtn"]}</a>
