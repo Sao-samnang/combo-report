@@ -141,6 +141,25 @@ $(document).ready(function () {
   let mySlideBnH=setInterval(function(){
     NextSlideBnH();
   },6400)
+  // mouse hover and stope slide
+  $(".cardHead").mouseover(function(){
+    clearInterval(mySlideH);
+  })
+  $(".cardHead").mouseleave(function(){
+    mySlideH=setInterval(function(){
+      NextSlideH();
+    },5400)
+  })
+  // mouse over on slide Banner Home
+  $(".card-banner").mouseover(function(){
+    clearInterval(mySlideBnH);
+  })
+  $(".card-banner").mouseleave(function(){
+    mySlideBnH=setInterval(function(){
+      NextSlideBnH();
+    },6400)
+  })
+  // end header slider
   // slide banner home
   let BannerHome = [
     {
